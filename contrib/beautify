@@ -1,7 +1,11 @@
 #!/bin/bash
 
+set -e
 shopt -u nocaseglob
 LANG=C
+
+DIR="$(git rev-parse --show-toplevel)"
+cd "$DIR"
 
 clang-format -style=file -fallback-style=none -i \
 	src/*.[hc]pp \
