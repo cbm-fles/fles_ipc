@@ -1,0 +1,8 @@
+#!/bin/bash
+
+shopt -u nocaseglob
+LANG=C
+
+clang-format -style=file -fallback-style=none -i \
+	src/*.[hc]pp \
+	test/*.[hc]pp
